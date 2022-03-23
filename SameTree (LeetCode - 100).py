@@ -18,7 +18,7 @@ class Solution:
             stack.extend([(p.left,q.left),(p.right,q.right)])
         return True
 
-#BFS way (Run Time - O(n), Space Time - Constant O(1))
+    #BFS way (Run Time - O(n), Space Time - Constant O(1))
     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
         queue = queue.dequeue([p, q])
         while queue:
@@ -30,3 +30,7 @@ class Solution:
             queue.extend([(p.left,q.left),(p.right,q.right)])
         return True
 
+    # Recursive Method
+    def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
+        if p and q:
+            return not p 
